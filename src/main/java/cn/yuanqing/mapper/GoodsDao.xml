@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="cn.yuanqing.dao.GoodsDao">
+	<select id="screenad" resultType="GoodsMainInfo">
+		select bigscreenad.goodsid,bigscreenad.goodsname,goodsinfo.goodspic from
+		goodsinfo,bigscreenad where goodsinfo.goodsname=bigscreenad.goodsname
+	</select>
+	<select id="recommend" resultType="GoodsMainInfo">
+		select recommendgoods.goodsid,recommendgoods.goodsname,goodsinfo.goodspic
+		from goodsinfo,recommendgoods where
+		goodsinfo.goodsname=recommendgoods.goodsname
+	</select>
+	<select id="newgoods" resultType="GoodsMainInfo">
+		select newgoods.goodsid,newgoods.goodsname,goodsinfo.goodspic from
+		goodsinfo,newgoods where goodsinfo.goodsname=newgoods.goodsname
+	</select>
+	<select id="popular" resultType="GoodsMainInfo">
+		select populargoods.goodsid,populargoods.goodsname,goodsinfo.goodspic from
+		goodsinfo,populargoods where
+		goodsinfo.goodsname=populargoods.goodsname
+	</select>
+	<select id="queryallgoods" resultType="GoodsInfo">
+		select * from goodsinfo
+	</select>
+	<select id="querywithcatagory" resultType="GoodsInfo"
+		parameterType="int">
+		select * from goodsinfo where goodscategory=#{no}
+	</select>
+	<select id="goodsdetail" resultType="GoodsInfo"
+		parameterType="String">
+		select * from goodsinfo where goodsname=#{name}
+	</select>
+	<select id="getcomment" resultType="CommentsInfo"
+		parameterType="String">
+		select * from usercomments where goods=#{name}
+	</select>
+	<select id="getBestComment" resultType="CommentsInfo"
+		parameterType="String">
+		select * from usercomments where goods=#{name} and grade='好评'
+	</select>
+	<select id="getMiddleComment" resultType="CommentsInfo"
+		parameterType="String">
+		select * from usercomments where goods=#{name} and grade='中评'
+	</select>
+	<select id="getWorstComment" resultType="CommentsInfo"
+		parameterType="String">
+		select * from usercomments where goods=#{name} and grade='差评'
+	</select>
+	<select id="getgoods_byname" resultType="GoodsInfo"
+		parameterType="String">
+		select * from goodsinfo where Goodsname=#{name}
+	</select>
+	<select id="getorderlist" resultType="OrderlistInfo">
+		select * from orderlist where Ispay='是' and Goodsname=#{goodsname} and
+		Buyer=#{name}
+	</select>
+	<insert id="insertorderlist" parameterType="CommentsInfo">
+		insert into usercomments
+		values(0,'${goods}','${comments}','${time}','${grade}','${userName}')
+	</insert>
+	<select id="queryallgoosdsasc" resultType="GoodsInfo">
+		select * from goodsinfo order by Goodsprice
+	</select>
+	<select id="querywithcategoryasc" resultType="GoodsInfo">
+		select * from goodsinfo where GoodsCategory=#{goodscatagory} order by
+		Goodsprice
+	</select>
+	<select id="queryallgoosdsdesc" resultType="GoodsInfo">
+		select * from goodsinfo order by Goodsprice desc
+	</select>
+	<select id="querywithcategorydesc" resultType="GoodsInfo">
+		select * from goodsinfo where GoodsCategory=#{goodscatagory} order by
+		Goodsprice desc
+	</select>
+	<update id="upgoodsbyname" parameterType="GoodsInfo">
+		update goodsinfo set
+		Goodsprice=#{goodsprice},Goodsnum=#{goodsNum},Goodsmaker=#{goodsMaker},Goodsdesc=#{goodsDesc},Goodspic=#{goodsPic},GoodsCategory=#{goodsCategory}
+		where Goodsname=#{goodsName}
+	</update>
+	<update id="upgoodsbynameexcpic" parameterType="GoodsInfo">
+		update goodsinfo set
+		Goodsprice=#{goodsprice},Goodsnum=#{goodsNum},Goodsmaker=#{goodsMaker},Goodsdesc=#{goodsDesc},GoodsCategory=#{goodsCategory}
+		where Goodsname=#{goodsName}
+	</update>
+
+	<delete id="degoodsbyname" parameterType="GoodsInfo">
+		delete from goodsinfo where Goodsname=#{goodsName}
+	</delete>
+	<insert id="insgoodsinfo" parameterType=".GoodsInfo">
+		insert into goodsinfo
+		values(null,'${goodsName}',${goodsprice},#{goodsNum},'${goodsMaker}','${goodsDesc}','${goodsPic}',${goodsCategory})
+	</insert>
+	<insert id="insgoodsinfoexceptpic" parameterType="GoodsInfo">
+		insert into goodsinfo
+		values(null,'${goodsName}',${goodsprice},#{goodsNum},'${goodsMaker}','${goodsDesc}','${goodsPic}',${goodsCategory})
+	</insert>
+	<select id="getgoods_byid" resultType="GoodsInfo">
+		select * from goodsinfo where Goodsid=#{regoodsid}
+	</select>
+	<update id="uptablad">
+		update ${table} set Goodsname= '${goodsName}',Goodspic='${goodsPic}' where
+		${table}.Goodsid=${goodsid}
+	</update>
+	<select id="selectInvalidbiscreeand" resultType="GoodsInfo"
+		parameterType="java.lang.String">
+		select distinct ${tablename}.goodsname from goodsinfo right join
+		${tablename} on ${tablename}.goodsname=goodsinfo.goodsname where
+		goodsinfo.goodsname is null
+	</select>
+	<select id="selectgoodsThoughVague" resultType="GoodsInfo">
+		select * from goodsinfo where goodsname like '%${key}%' or goodsmaker like
+		'%${key}%' or goodsdesc like '%${key}%' or goodsprice like '%${key}%'
+		or goodsnum like '%${key}%'
+	</select>
+
+</mapper>

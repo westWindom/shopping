@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="cn.yuanqing.dao.UserDao">
+	<!--用户登录 -->
+	<select id="login" parameterType="String" resultType="UserInfo">
+		<!--sq_s_user 是专门为user表创建的序列 -->
+		select * from userinfo where RegName=#{uname} and Password=#{upass}
+	</select>
+	<!--查看是否有该用户名 -->
+	<select id="isregister" parameterType="String" resultType="UserInfo">
+		select * from userinfo where binary RegName=#{name};
+	</select>
+	<!--向用户表中插入一条数据 -->
+	<insert id="insertUser" parameterType="UserInfo">
+		insert into userinfo(userid,regname,email,password)
+		values(0,'${regName}','${email}','${password}')
+	</insert>
+	<select id="order" parameterType="String" resultType="OrderlistInfo">
+		select * from orderlist where Buyer=#{name}
+	</select>
+	<select id="queryshopcart_byuser" parameterType="String"
+		resultType="ShopcartInfo">
+		select shopcart.*,goodsinfo.Goodsprice from shopcart,goodsinfo where
+		shopcart.name=goodsinfo.Goodsname and shopcart.buyer=#{name}
+	</select>
+	<select id="querycomment_byname" parameterType="String"
+		resultType="CommentsInfo">
+		select * from usercomments where username=#{name}
+	</select>
+	<select id="querysystemmessage" parameterType="String"
+		resultType="SystemMessageInfo">
+		select * from systemmessage where accepter=#{name}
+	</select>
+	<select id="queryuseraccount" parameterType="String"
+		resultType="UseraccountInfo">
+		select * from useraccount where user=#{name}
+	</select>
+	<select id="querybyname" parameterType="String" resultType="UserInfo">
+		select * from userinfo where RegName=#{name}
+	</select>
+	<select id="querygoods" parameterType="java.util.Map"
+		resultType="GoodsInfo">
+		select * from goodsinfo where Goodsname=#{name} and Goodsprice=#{price}
+	</select>
+	<update id="updataGoodsInfo">
+		update goodsinfo set Goodsnum=#{0} where Goodsname=#{1}
+	</update>
+	<update id="changeIspay">
+		update orderlist set Ispay='是' where Orderprice=#{0} and Goodsname=#{1}
+	</update>
+	<update id="deaccount">
+		update useraccount set money=(money-${account}) where user=#{username}
+	</update>
+	<update id="updateaddress">
+		update userinfo set Address=#{0} where RegName=#{1}
+	</update>
+	<select id="queryshopcartnamebuyer" parameterType="ShopcartInfo"
+		resultType="ShopcartInfo">
+		select * from shopcart where name=#{name} and buyer=#{buyer}
+	</select>
+	<insert id="insertShopcart" parameterType="ShopcartInfo">
+		insert into shopcart values(null,#{name},#{num},#{buyer})
+	</insert>
+	<update id="updateShopcart" parameterType="ShopcartInfo">
+		update shopcart set num=num+${num} where buyer='${buyer}' and name='${name}'
+	</update>
+	<insert id="insertorderlist">
+		insert into orderlist
+		values(null,'${goodsname}',${num},'是','${buyer}',${price})
+	</insert>
+	<update id="updateorderlistnum">
+		update orderlist set Ordernum=Ordernum+${ordernum} where
+		Goodsname='${goodsname}' and Ispay='是' and Buyer='${buyer}' and
+		Orderprice=${orderprice}
+	</update>
+	<select id="queryorderBynamepricebuyer" resultType="OrderlistInfo">
+		select * from orderlist where Goodsname=#{0} and Ispay='是' and Buyer=#{1}
+		and Orderprice=#{2}
+	</select>
+	<delete id="deleteOrder">
+		delete from orderlist where Goodsname=#{goodsname} and Buyer=#{buyer}
+	</delete>
+	<delete id="deleteshopcart">
+		delete from shopcart where name=#{goodsname} and buyer=#{buyer}
+	</delete>
+	<select id="queryorderBynamepricebuyernotpay" resultType="OrderlistInfo">
+		select * from orderlist where Goodsname=#{goodsname} and Ispay='否' and
+		Buyer=#{buyer} and Orderprice=#{price};
+	</select>
+	<insert id="insertorderlistnotpay">
+		insert into orderlist
+		values(null,'${goodsname}','${ordernum}','否','${buyer}','${orderprice}')
+	</insert>
+	<update id="updatelogistics">
+		update userinfo set Logistics=#{logistics} where RegName=#{username}
+	</update>
+	<select id="queryalluser" resultType="UserInfo">
+		select * from userinfo
+	</select>
+	<delete id="deuserbyname" parameterType="UserInfo">
+		delete from userinfo where RegName=#{regName}
+	</delete>
+	<update id="upuserbyname" parameterType="UserInfo">
+		update userinfo set
+		Sex=#{sex},Address=#{address},BankId=#{bankId},Birthday=#{birthday},Email=#{email},Identify=#{identify},Logistics=#{logistics},Password=#{password},RealName=#{realName}
+		where RegName=#{regName}
+	</update>
+	<update id="improveInfo" parameterType="UserInfo">
+		update userinfo set
+		RealName=#{realName},Birthday=#{birthday},Sex=#{sex},Identify=#{identify},BankId=#{bankId}
+		where RegName=#{regName}
+	</update>
+	<select id="allcomments" resultType="CommentsInfo">
+		select * from usercomments
+	</select>
+	<select id="allaccount" resultType="UseraccountInfo">
+		select * from useraccount
+	</select>
+	<update id="upaccountbyname" parameterType="UseraccountInfo">
+		update useraccount set money=#{money} where user=#{user}
+	</update>
+	<select id="allorder" resultType="OrderlistInfo">
+		select orderlist.*,goodsinfo.Goodsprice from orderlist,goodsinfo where
+		orderlist.Goodsname=goodsinfo.Goodsname
+	</select>
+	<select id="allcart" resultType="ShopcartInfo">
+		select shopcart.*,goodsinfo.Goodsprice from shopcart,goodsinfo where
+		shopcart.name=goodsinfo.Goodsname
+	</select>
+	<update id="upmessage" parameterType="SystemMessageInfo">
+		insert into systemmessage
+		values(null,'${accepter}','${contents}','${time}');
+	</update>
+	<insert id="insertAccount" parameterType="UseraccountInfo">
+		insert into useraccount values(0,${money},'${user}');
+	</insert>
+</mapper>

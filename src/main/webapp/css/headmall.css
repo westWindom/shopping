@@ -1,0 +1,41 @@
+@CHARSET "UTF-8";
+/*网页(mainhandler.jsp、allGoodsDisplay.jsp、goodsdetail.jsp)公用的头部css文件*/
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+
+#blue_link {
+	text-decoration: none;
+}
+
+#headmall {
+	width: 1366px;
+	height: 150px;
+	margin: 0 auto;
+}
+
+#headmall1 {
+	width: 80%;
+	height: 50px;
+	margin: 0 auto;
+}
+
+#headmall1_part {
+	float: left
+}
+
+#headmall2_part {
+	float: right
+}
+
+#headmall2_part_notifyinfodetail {
+	margin: 10px 10px 10px 122px
+}
+;

@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+/*adminmanage.jsp的css文件*/
+.left {
+	width: 220px;
+	height: 500px;
+	background: red;
+}
+
+.managementmenupatt {
+	width: 160px;
+	text-align: center;
+	background: #00000080;
+	border-radius: 10px;
+	margin: 5px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+.managementmenupattchi {
+	width: 160px;
+	background: #0000004d;
+	text-align: center;
+	margin: 5px;
+	font-size: 10px;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.managementmenu {
+	width: 160px;
+	margin-left: 30px;
+	position: absolute;
+}
+
+.manageiframe {
+	width: 1100px;
+	height: 600px;
+	position: absolute;
+	left: 220px;
+	margin-top: 100px;
+}
+
+.link {
+	color: black;
+	text-decoration: none;
+}

@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+
+#copyright {
+	text-align: center;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	vertical-align: bottom;
+	border-top: 1px solid #e1e1e1;
+}

@@ -1,0 +1,378 @@
+@CHARSET "UTF-8";
+/*mainhandler.jsp页面的css*/
+#bodycontainer {
+	width: 1520px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#secondpart {
+	margin: 0px;
+	margin-bottom: 10px;
+	width: 1520px;
+	height: 469px;
+	background: red;
+	padding-top: 10px;
+	background-image: url(../img/beijing_goods.gif);
+	background-repeat: repeat;
+	background-position: -200px 0px;
+}
+
+#category {
+	position: absolute;
+	width: 180px;
+	height: 400px;
+	margin-top: 0px;
+	margin-left: 100px;
+	border-left: 2px dotted white;
+}
+
+#categoryhead {
+	position: relative;
+	cursor: default;
+	text-align: center;
+	padding: 14.5px 10px;
+	display: block;
+	border-bottom: 1px solid green;
+	background: green;
+	color: white;
+}
+
+#categoryborddesign {
+	display: inline-block;
+	position: relative;
+	width: 20px;
+	height: 28px;
+}
+
+#categoryborder1 {
+	display: inline-block;
+	position: absolute;
+	top: 15px;
+	right: 10px;
+	width: 6px;
+	height: 2px;
+	border-left: 5px solid white;
+	background-color: green;
+	border-right: 15px solid white;
+}
+
+#categoryborder2 {
+	display: inline-block;
+	position: absolute;
+	top: 22px;
+	right: 10px;
+	width: 6px;
+	height: 2px;
+	border-left: 5px solid white;
+	background-color: green;
+	border-right: 15px solid white;
+}
+
+#categoryborder3 {
+	display: inline-block;
+	position: absolute;
+	top: 29px;
+	right: 10px;
+	width: 6px;
+	height: 2px;
+	border-left: 5px solid white;
+	background-color: green;
+	border-right: 15px solid white;
+}
+
+#categoryinfo {
+	font-size: 20px;
+}
+
+#categorybody {
+	display: block;
+	position: absolute;
+}
+
+#catebodytemplet {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	padding-top: 15px;
+	font-size: 20px;
+	border: 1px solid #e3b7a4;
+	padding-bottom: 15px;
+	vertical-align: middle;
+	text-align: center;
+	height: 24px;
+	width: 180px;
+	margin-left: 0px;
+	background: red;
+	transition: margin-left 0.5s, width 0.5s;
+	-webkit-transition: margin-left 0.5s, width 0.5s; /* Safari */
+	color: white;
+}
+
+#catebodytemplet:HOVER {
+	width: 180px;
+	margin-left: 10px;
+}
+
+#secondpart #scrollpic {
+	width: 804px;
+	height: 400px;
+	position: absolute;
+	margin-left: 282px;
+}
+
+#scrollpicnavleft {
+	position: absolute;
+	z-index: 10;
+	background-image: url("../img/home_sprite.png");
+	width: 33px;
+	height: 70px;
+	top: 165px;
+	left: -32px;
+	background-position: 0px -70px;
+	visibility: hidden;
+	background-repeat: no-repeat;
+	background-color: #000;
+	opacity: 0.2;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#scrollpicnavright {
+	position: absolute;
+	z-index: 10;
+	background-image: url("../img/home_sprite.png");
+	width: 33px;
+	height: 70px;
+	top: 165px;
+	background-position: -33px -70px;
+	background-repeat: no-repeat;
+	right: -33px;
+	background-color: #000;
+	opacity: 0.2;
+	overflow: visible;
+	visibility: hidden;
+	cursor: pointer;
+}
+
+#scrollpicbotnav {
+	position: absolute;
+	z-index: 10;
+	bottom: 55px;
+	left: 252px;
+	width: 280px;
+	height: 30px;
+	cursor: default;
+}
+
+.scrollpicbotnavmu {
+	display: inline-block;
+	position: relative;
+	background: #000;
+	width: 20px;
+	height: 20px;
+	background-repeat: no-repeat;
+	opacity: 0.2;
+	overflow: hidden;
+	margin: 5px 10px;
+}
+
+.scrollpicbotnavmu:HOVER {
+	opacity: 1;
+	background: red;
+}
+
+#scrollpicsource {
+	position: absolute;
+	width: 802px;
+	height: 396px;
+	display: block;
+	border-top: 3px solid red;
+	border-bottom: 3px solid green;
+	top: -1px;
+	border-right: 3px solid WhiteSmoke;
+}
+
+#picattribute {
+	position: absolute;
+	left: 5px;
+	width: 787px;
+	height: 394px;
+}
+
+#silver_1 {
+	border: 3px solid whiteSmoke;
+	position: absolute;
+	width: 270px;
+	height: 396px;
+	left: 1092px;
+	display: block;
+	background: #FAFAFA
+}
+
+#silver_template1 {
+	position: relative;
+	padding: 5px;
+	margin-left: 5px;
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background: #FAFAFA;
+	display: block;
+	height: 180.5px;
+	widht: 260px;
+	text-align: center;
+}
+
+#silver_tempate1_pic_con {
+	display: block;
+	margin: 5px;
+}
+
+#silver_template1 #silver_tempate1_pic_con .silver_tempate1_pic {
+	height: 127px;
+}
+
+#silver_template1 {
+	position: relative;
+	overflow: hidden;
+	padding: 5px;
+	margin-left: 5px;
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 2.5px;
+	background: white;
+	display: block;
+	height: 180.5px;
+	widht: 260px;
+}
+
+.silver_tempate1_info_con {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 20px;
+	font-style: normal;
+	display: block;
+}
+
+#silver_template2 {
+	position: relative;
+	padding: 5px;
+	overflow: hidden;
+	margin-left: 5px;
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background: white;
+	display: block;
+	height: 180.5px;
+	widht: 260px;
+	text-align: center;
+}
+
+#silver_template2 #silver_tempate1_pic_con .silver_tempate1_pic_2 {
+	height: 127px;
+}
+
+#third {
+	margin: 0px;
+	height: 1125px;
+	padding: 0px;
+	background-image: url(../img/beijing_tuijian.gif)
+}
+
+.third_chipart {
+	width: 1290px;
+	margin-left: 125px;
+	height: 330px;
+	margin-bottom: 45px;
+}
+
+.third_chipart_title {
+	width: 1266px;
+	height: 50px;
+	background: green;
+	margin-bottom: 5px;
+}
+
+.third_chipart_title_fontleft {
+	float: left;
+	color: white;
+	font-size: 25px;
+	display: inline-block;
+	margin-left: 50px;
+	vertical-align: middle;
+	padding-top: 7.5px;
+}
+
+.third_chipart_title_fontright {
+	color: white;
+	font-size: 15px;
+	display: inline-block;
+	float: right;
+	margin-right: 50px;
+	vertical-align: middle;
+	padding-top: 21px;
+}
+
+.third_chipart_body {
+	background: #FAFAFA;
+	margin: 0px;
+	padding: 5px;
+}
+
+.goodstemplate {
+	position: relative;
+	padding: 1px;
+	margin: 5px;
+	background: red;
+	width: 193px;
+	height: 260px;
+	display: inline-block;
+	text-align: center;
+	font-size: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.goodstemplate:HOVER {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+.goodstemplate_piccon {
+	position: relative;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.goodstemplate_picinfo {
+	height: 191px;
+	width: 191px;
+	margin-bottom: 20px
+}
+
+.goodstemplate_text {
+	color: beige;
+	text-align: center;
+	font-size: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.linkgoods {
+	text-decoration: none;
+	color: black;
+}
+
+.nav-item>a>span {
+	background-image: url(../img/bk_nav.png);
+	width: 21px;
+	height: 18px;
+	display: inline-block;
+}

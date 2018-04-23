@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+html {
+	width: 100%;
+}
+
+body {
+	margin: 0px;
+	width: 100%;
+	background: #FCFCFC;
+	overflow-x: visible;
+	overflow-y: visible;
+}

@@ -1,0 +1,493 @@
+body {
+	margin: 0px;
+	width: 100%;
+	background: #FCFCFC;
+	overflow-x: visible;
+	overflow-y: visible;
+}
+
+#upperPart {
+	position: relative;
+	background: #fff;
+	border: 1px solid #e1e1e1;
+}
+
+#upperPartLeft {
+	display: inline-block;
+	position: relative;
+	padding: 0px;
+	left: 60px;
+}
+
+#upperPartRight {
+	display: inline-block;
+	position: relative;
+	float: right;
+	right: 90px;
+	color: #999;
+	vertical-align: text-top;
+	font-family: monospace;
+}
+
+#blue_link {
+	color: #06c;
+	text-decoration: none;
+}
+
+#regbac {
+	position: relative;
+	border-bottom: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #e1e1e1;
+	margin-left: 33.75%;
+}
+
+#user {
+	border: 1px solid rgb(222, 222, 222);
+	display: inline-block;
+	width: 200px;
+	height: 30px;
+	padding: 2px 15px;
+}
+
+#userResult {
+	display: inline-block;
+	width: 220px;
+	height: 35px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	left: 15px;
+	background: LightGray;
+	position: relative;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#userResult:before {
+	content: "";
+	position: absolute;
+	right: 97%;
+	top: 20px;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-right: 10px solid LightGray;
+	border-bottom: 5px solid transparent;
+	transform: rotate(340deg);
+	-ms-transform: rotate(340deg); /* IE 9 */
+	-webkit-transform: rotate(340deg); /* Safari and Chrome */
+}
+
+#userResult3 {
+	display: inline-block;
+	width: 220px;
+	height: 35px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	left: 15px;
+	background: rgb(255, 244, 215);
+	position: relative;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#userResult3:before {
+	content: "";
+	position: absolute;
+	right: 97%;
+	top: 20px;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-right: 10px solid rgb(255, 244, 215);
+	border-bottom: 5px solid transparent;
+	transform: rotate(340deg);
+	-ms-transform: rotate(340deg); /* IE 9 */
+	-webkit-transform: rotate(340deg); /* Safari and Chrome */
+}
+
+#email {
+	border: 1px solid rgb(222, 222, 222);
+	width: 200px;
+	height: 30px;
+	padding: 2px 15px;
+}
+
+#emailResult {
+	display: inline-block;
+	width: 220px;
+	height: 35px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	left: 15px;
+	background: LightGray;
+	position: relative;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#emailResult:before {
+	content: "";
+	position: absolute;
+	right: 97%;
+	top: 20px;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-right: 10px solid LightGray;
+	border-bottom: 5px solid transparent;
+	transform: rotate(340deg);
+	-ms-transform: rotate(340deg); /* IE 9 */
+	-webkit-transform: rotate(340deg); /* Safari and Chrome */
+}
+
+#emailResult2 {
+	display: inline-block;
+	width: 250px;
+	height: 35px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	left: 15px;
+	background: rgb(255, 244, 215);
+	position: relative;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#emailResult2:before {
+	content: "";
+	position: absolute;
+	right: 97%;
+	top: 20px;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-right: 10px solid rgb(255, 244, 215);
+	border-bottom: 5px solid transparent;
+	transform: rotate(340deg);
+	-ms-transform: rotate(340deg); /* IE 9 */
+	-webkit-transform: rotate(340deg); /* Safari and Chrome */
+}
+
+#password {
+	border: 1px solid rgb(222, 222, 222);
+	width: 200px;
+	height: 30px;
+	padding: 2px 15px;
+}
+
+#passwordResult {
+	display: inline-block;
+	width: 350px;
+	height: 35px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	left: 15px;
+	background: LightGray;
+	position: relative;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#passwordResult:before {
+	content: "";
+	position: absolute;
+	right: 97%;
+	top: 20px;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-right: 10px solid LightGray;
+	border-bottom: 5px solid transparent;
+	transform: rotate(340deg);
+	-ms-transform: rotate(340deg); /* IE 9 */
+	-webkit-transform: rotate(340deg); /* Safari and Chrome */
+}
+
+#repasswordResult {
+	display: inline-block;
+	width: 180px;
+	height: 35px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	left: 15px;
+	background: LightGray;
+	position: relative;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#repasswordResult:before {
+	content: "";
+	position: absolute;
+	right: 97%;
+	top: 20px;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-right: 10px solid LightGray;
+	border-bottom: 5px solid transparent;
+	transform: rotate(340deg);
+	-ms-transform: rotate(340deg); /* IE 9 */
+	-webkit-transform: rotate(340deg); /* Safari and Chrome */
+}
+
+#checkPassword {
+	border: 1px solid rgb(222, 222, 222);
+	width: 200px;
+	height: 30px;
+	padding: 2px 15px;
+}
+
+#copyright {
+	text-align: center;
+}
+
+#thead {
+	display: inline-block;
+	padding-top: 50px;
+	padding-left: 30px;
+	position: relative;
+	margin-bottom: 20px;
+	margin-left: 27px;
+	color: red;
+}
+
+#rbtd {
+	padding-bottom: 50px;
+	margin-top: 40px;
+}
+
+#userResult2 {
+	padding: 0px 20px 0px 1px;
+	position: absolute;
+	padding: 12px 10px;
+}
+
+#checkResult2 {
+	padding: 0px 20px 0px 1px;
+	position: absolute;
+	padding: 12px 10px;
+}
+
+#emailResult3 {
+	padding: 0px 20px 0px 1px;
+	position: absolute;
+	padding: 12px 10px;
+}
+
+#headofhead {
+	display: inline-block;
+	text-align: right;
+	padding-right: 5px;
+	position: relative;
+	width: 100px;
+}
+
+#headofuser {
+	display: inline-block;
+	text-align: right;
+	padding-right: 5px;
+	position: relative;
+	width: 100px;
+}
+
+#headofemail {
+	display: inline-block;
+	text-align: right;
+	padding-right: 5px;
+	position: relative;
+	width: 100px;
+}
+
+#headofpassword {
+	display: inline-block;
+	text-align: right;
+	padding-right: 5px;
+	position: relative;
+	width: 100px;
+}
+
+#headofcheckpassword {
+	display: inline-block;
+	text-align: right;
+	padding-right: 5px;
+	position: relative;
+	width: 100px;
+}
+
+#registeButton {
+	background: red;
+	position: relative;
+	border-radius: 3px;
+	padding: 15px 100px;
+	color: white;
+	cursor: pointer;
+}
+
+#registeButton:hover {
+	background: rgb(215, 34, 38);
+}
+
+#headofregiste {
+	display: inline-block;
+	text-align: right;
+	padding-right: 5px;
+	position: relative;
+	width: 100px;
+}
+
+#usercontainer {
+	margin-bottom: 15px;
+}
+
+#emailcontainer,#emailvalidecontainer{
+	margin-bottom: 15px;
+}
+
+#passwordcontainer {
+	margin-bottom: 15px;
+}
+
+#passStrength1 {
+	display: inline-block;
+	height: 12px;
+	width: 20px;
+	padding: 0px;
+	margin-left: 10px;
+	margin-right: 5px;
+}
+
+#passStrength2 {
+	display: inline-block;
+	width: 20px;
+	height: 12px;
+	padding: 0px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#passStrength3 {
+	display: inline-block;
+	width: 20px;
+	height: 12px;
+	padding: 0px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#passStrength4 {
+	display: inline-block;
+	height: 12px;
+	width: 20px;
+	padding: 0px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#passStrengthinfo {
+	padding: 0px;
+	margin-left: 5px;
+	margin-right: 10px;
+}
+
+#checkpasswordResult {
+	display: inline-block;
+	width: 130px;
+	height: 35px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	left: 15px;
+	background: LightGray;
+	position: relative;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#checkpasswordResult:before {
+	content: "";
+	position: absolute;
+	right: 97%;
+	top: 20px;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-right: 10px solid LightGray;
+	border-bottom: 5px solid transparent;
+	transform: rotate(340deg);
+	-ms-transform: rotate(340deg); /* IE 9 */
+	-webkit-transform: rotate(340deg); /* Safari and Chrome */
+}
+
+#checkResult3 {
+	display: inline-block;
+	width: 170px;
+	height: 35px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	left: 15px;
+	background: rgb(255, 244, 215);
+	position: relative;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#checkResult3:before {
+	content: "";
+	position: absolute;
+	right: 97%;
+	top: 20px;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-right: 10px solid rgb(255, 244, 215);
+	border-bottom: 5px solid transparent;
+	transform: rotate(340deg);
+	-ms-transform: rotate(340deg); /* IE 9 */
+	-webkit-transform: rotate(340deg); /* Safari and Chrome */
+}
+
+#cantidentity {
+	margin-left: 106px;
+	cursor: pointer;
+}
+
+#box2 {
+	margin-left: 111px;
+	margin-top: 14px;
+}
+
+#v_container {
+	width: 150px;
+	height: 30px;
+}
+
+#code_input {
+	height: 30px;
+	width:145px;
+}
+
+.togglehidden {
+	display: none;
+}
+
+#containerre {
+	width: 1266px;
+	margin: 0 auto;
+}

@@ -1,0 +1,34 @@
+@CHARSET "UTF-8";
+/*网页personalCenter的css代码*/
+.personalInfocon {
+	width: 1166px;
+	height: 364px;
+	margin: 0 auto;
+	border: 1px solid #f6b4bfe6;
+}
+
+.personalmenu {
+	width: 103px;
+}
+
+.menutemplate {
+	width: 100px;
+	height: 30px;
+	background: #ecd8dc;
+	font-size: 16px;
+	font-family: monospace;
+	cursor: pointer;
+	text-align: center;
+	border: 2px solid #f6b4bfe6;
+	padding-top: 5px;
+	vertical-align: middle;
+}
+
+.ifram {
+	width: 1063px;
+	height: 350px;
+	position: relative;
+	top: -337px;
+	left: 106px;
+	background: #FAFAFA
+}

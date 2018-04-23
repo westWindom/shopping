@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>帮助中心</title>
+<link href="img/logo/titleIcon.ico" rel="SHORTCUT ICON" />
+<link href="css/head.css" type="text/css" rel="stylesheet"></link>
+<link href="css/foot.css" type="text/css" rel="stylesheet"></link>
+<style type="text/css">
+#upperPart {
+	position: absolute;
+	width: 1366px;
+	height: 95px;
+}
+
+#headinline {
+	width: 1366px;
+	height: 20px;
+	background: #CCE6DB;
+	position: absolute;
+	top: 96px;
+}
+
+#helpcentersecond {
+	
+}
+
+#helpcenterleft {
+	width: 201px;
+	height: 400px;
+	position: relative;
+	top: 116px;
+	background: #FFFFFF;
+}
+
+#helpcentermidbar {
+	width: 7px;
+	height: 400px;
+	position: absolute;
+	top: 116px;
+	left: 201px;
+	background: #BFE5D5;
+}
+
+#midbarpatt {
+	width: 7px;
+	height: 70px;
+	background: #95D4B8;
+	top: 150px;
+	position: absolute;
+	border-top: 1px solid #397C5E;
+	border-bottom: 1px solid #397C5E;
+	cursor: pointer;
+}
+
+#helpcenterrig {
+	width: 1159px;
+	height: 400px;
+	position: absolute;
+	top: 116px;
+	left: 208px;
+	background: #F4FFFB;
+}
+
+#footline {
+	width: 1366px;
+	height: 20px;
+	position: absolute;
+	top: 516px;
+	background: #CCE6DB;
+}
+
+#copyright {
+	border-width: 0px
+}
+
+#midwhite {
+	width: 0px;
+	height: 0px;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-right: 5px solid white;
+	position: absolute;
+	top: 30px;
+}
+
+#midwhite1 {
+	width: 0px;
+	height: 0px;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 5px solid white;
+	position: absolute;
+	top: 30px;
+}
+
+.nav {
+	width: 99%;
+	height: 30px;
+	position: relative;
+	background: #E8EDE9;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 5px;
+	border: 1px solid #397C5E;
+	border-right: 2px solid #397C5E;
+	cursor: pointer;
+}
+
+#nav1info {
+	width: 10px;
+	height: 10px;
+	border: 1px solid #528282;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+#nav1chi {
+	text-align: center;
+	margin-left: 45px;
+}
+
+#nav1coningchi {
+	width: 99%;
+	height: 30px;
+	position: relative;
+	background: white;
+	padding-top: 5px;
+	cursor: pointer;
+	display: none;
+}
+
+#nav2info {
+	width: 10px;
+	height: 10px;
+	border: 1px solid #528282;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+#nav2chi {
+	text-align: center;
+	margin-left: 45px;
+}
+
+#nav2coningchi {
+	width: 99%;
+	height: 30px;
+	position: relative;
+	background: white;
+	padding-top: 5px;
+	cursor: pointer;
+	display: none;
+}
+
+#nav1text:HOVER {
+	color: red
+}
+
+#nav2text:HOVER {
+	color: red
+}
+
+#nav1_introducion_info {
+	display: none;
+}
+
+#nav2_introducion_info {
+	display: none;
+}
+
+#goback {
+	font: 12px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+#goback:HOVER {
+	color: red;
+}
+</style>
+</head>
+<body>
+	<div id="upperPart">
+		<a href="main.jsp"><img id="upperPartLeft" alt="logo_head"
+			src="img/logo/logo_head.jpg"></a>
+		<h5 id="upperPartRight">你好，欢迎光临网上购物商城</h5>
+	</div>
+	<div id="headinline">
+		<span id="goback" title="返回">&lt;&lt;返回</span>
+	</div>
+	<div id="helpcenterleft">
+		<div id="nav1con">
+			<div id="nav1" class="nav" onclick="nav1fun()">商城帮助</div>
+			<div id="nav1coningchi">
+				<span id="nav1info"></span><span style="color: #528282">···</span><span
+					id="nav1text" onclick="shownav1info()">操作流程</span>
+			</div>
+		</div>
+		<div id="nav2con">
+			<div id="nav2" class="nav" onclick="nav2fun()">系统帮助</div>
+			<div id="nav2coningchi">
+				<span id="nav2info"></span><span style="color: #528282">···</span><span
+					id="nav2text" onclick="shownav2info()">关于系统</span>
+			</div>
+		</div>
+	</div>
+	<div id="helpcentermidbar">
+		<div id="midbarpatt" title="关闭文档树" onclick="dmstate()">
+			<div id="midwhite"></div>
+		</div>
+	</div>
+	<div id="helpcenterrig">
+
+		<div id="nav1_introducion_info">
+			<h3>操作流程</h3>
+			<div>注册-》登录-》浏览商品-》添加购物车-》下单</div>
+		</div>
+
+		<div id="nav2_introducion_info">
+			<h3>关于系统</h3>
+			<div>
+				本系统是一个网上购物商城，系统由IT爱好者_吴兴国负责开发。系统难免会有不尽人意的地方，还请谅解。若你想对系统提出任何改进意见，欢迎点击<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2965372064&site=www.wxguo.cn/index.html&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2965372064:52" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>和我聊天。
+				若我不再线，可以给我留言，我会在空闲时，回复你 <img style="width:20px;" src="img/smiley.gif"/>。<br/>
+				可以<a href="download/huitougoDesignFile.zip">点我下载</a>该项目的设计文档哦
+				<p>可以点我<a href="http://www.wxguo.cn/huitougo/druid/index.html">查看数据库连接池</a>情况</p>
+			</div>
+		</div>
+
+	</div>
+	<div id="footline"></div>
+	<div id="copyright">
+		<p>Copyright © 网上商城 2017</p>
+	</div>
+</body>
+<script type="text/javascript">
+function nav1fun(){
+	var nav1coningchi=document.getElementById("nav1coningchi");
+	var nav2coningchi=document.getElementById("nav2coningchi");
+	nav1coningchi.style.display="block";
+	nav2coningchi.style.display="none";
+}
+function nav2fun(){
+	var nav1coningchi=document.getElementById("nav1coningchi");
+	var nav2coningchi=document.getElementById("nav2coningchi");
+	nav1coningchi.style.display="none";
+	nav2coningchi.style.display="block";
+}
+function shownav1info(){
+	document.getElementById("nav1_introducion_info").style.display="block";
+	document.getElementById("nav2_introducion_info").style.display="none";
+}
+function shownav2info(){
+	document.getElementById("nav1_introducion_info").style.display="none";
+	document.getElementById("nav2_introducion_info").style.display="block";
+}
+var left_part=document.getElementById("helpcenterleft");
+var middle_part=document.getElementById("helpcentermidbar");
+var right_part=document.getElementById("helpcenterrig");
+var midwhite=document.getElementById("midwhite");
+var i=0;
+function dmstate(){
+	if(i==0){
+		left_part.style.display="none";
+		middle_part.style.left="0px";
+		right_part.style.left="7px";
+		right_part.style.width="1460px";
+		midwhite.id="midwhite1";
+		i=1;
+		
+	}else{
+		left_part.style.display="block";
+		middle_part.style.left="201px";
+		right_part.style.left="208px";
+		right_part.style.width="1159px";
+		midwhite.id="midwhite";
+		i=0;
+	}
+}
+var goback=document.getElementById("goback");
+goback.addEventListener("click",function(){
+	history.go(-1);
+});
+</script>
+</html>

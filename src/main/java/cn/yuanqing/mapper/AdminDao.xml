@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="cn.yuanqing.dao.AdminDao">
+	<select id="queryadmin" parameterType="AdminInfo" resultType="AdminInfo">
+		select * from admininfo where binary Adminname=#{adminName} and binary Adminpsw=#{adminPsw}
+	</select>
+
+</mapper>

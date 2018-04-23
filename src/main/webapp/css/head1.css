@@ -1,0 +1,29 @@
+#upperPart {
+	position: relative;
+	background: #fff;
+	border: 1px solid #e1e1e1;
+	width: 1519px;
+	margin: 0 auto;
+}
+
+#upperPartLeft {
+	display: inline-block;
+	position: relative;
+	padding: 0px;
+	left: 60px;
+}
+
+#upperPartRight {
+	display: inline-block;
+	position: relative;
+	float: right;
+	right: 90px;
+	color: #999;
+	vertical-align: text-top;
+	font-family: monospace;
+}
+
+#blue_link {
+	color: #06c;
+	text-decoration: none;
+}
